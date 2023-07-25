@@ -5,9 +5,9 @@ def linear_search(a,n):
     return False
 a=[1,2,3,4,5,6]
 n=4
-if (linear_search(a,n)==-1):
+if (linear_search(a,n)):
     print("Not found")
 else :
-    print("Found at index",str(linear_search(a,n)))
+    print("Found")
 
 
