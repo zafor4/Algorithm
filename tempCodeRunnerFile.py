@@ -1,0 +1,1 @@
+n=int(input("Number of elements in the array:-"))

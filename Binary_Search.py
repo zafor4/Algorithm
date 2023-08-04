@@ -10,9 +10,9 @@ def binary_search(a,n):
         else :
             high=mid-1
     return -1
-a=[1,2,3,4,5,6,7,8]
-n=6
-if (binary_search(a,n)==-1):
+a=list(map(int, input("elements of array:-").strip().split()))
+nf=int(input())
+if (binary_search(a,nf)==-1):
     print("Not found")
 else :
-    print("Found in index",str(binary_search(a,n)))
+    print("Found in index",str(binary_search(a,nf)))
