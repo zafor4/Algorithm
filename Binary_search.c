@@ -6,8 +6,9 @@ int main(){
     int start=0;
     
     int end=sizeof(arr)/sizeof(int);
-    int mid=start+(end-start)/2;
+    
     while (start<=end){
+        int mid=start+(end-start)/2;
         if (arr[mid]==number){
             printf("Found at nidex  %d\n",mid);
             return 0;
