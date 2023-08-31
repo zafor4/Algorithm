@@ -52,15 +52,15 @@ def fractional_Knapsack(weight,price,capacity):
     priceInUnit.reverse()
     j=0
     totalamount=0
-    while(capacity>=0):
+    while(capacity>0):
         if (j>=n):
             break 
-        if (weight[i]<=capacity):
-            totalamount+=weight[i]*priceInUnit[i]
-            capacity=capacity-weight[i]
-            i+=1
+        if (weight[j]<=capacity):
+            totalamount+=weight[j]*priceInUnit[j]
+            capacity=capacity-weight[j]
+            j+=1
         else :
-            totalamount=capacity*priceInUnit[i]
+            totalamount+=capacity*priceInUnit[j]
             capacity=0      
         
     print(totalamount)
