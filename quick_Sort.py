@@ -13,7 +13,7 @@ def quick(a,start,end):
         quick(a,start,p-1)
         quick(a,p+1,end)
 
-a=[10,80,30,90,20,70,95,40]
+a=list(map(int, input("elements of array: ").strip().split()))
 start=0
 end=len(a)-1
 quick(a,start,end)
