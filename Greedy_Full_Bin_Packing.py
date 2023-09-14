@@ -16,16 +16,16 @@ def subsets_with_sums(A):
 
 array = [2,2,3,3,3,3,4,4,4,6,7,7]
 subset_sums = subsets_with_sums(array)
-# print(subset_sums)
+print(subset_sums)
 count=0
 total=0
 ts=12
 for sums in subset_sums:
     if total==48:
-        exit(0)
+        break
     if sums==ts:
         count+=1
         total+=sums
-    else :
-        ts-=1
-print(count)            
+    # else :
+    #     ts-=1
+print(count)         
