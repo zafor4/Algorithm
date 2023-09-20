@@ -6,14 +6,11 @@ def knapSack(W, wt, val, n):
 		return knapSack(W, wt, val, n-1)
 
 	else:
-		return max(
-			val[n-1] + knapSack(
-				W-wt[n-1], wt, val, n-1),
-			knapSack(W, wt, val, n-1))
+		return max(val[n-1] + knapSack(W-wt[n-1], wt, val, n-1),knapSack(W, wt, val, n-1))
 
 if __name__ == '__main__':
-	profit = [60, 100, 120]
-	weight = [10, 20, 30]
-	W = 50
+	profit = [30, 40, 60]
+	weight = [3, 2, 5]
+	W = 6
 	n = len(profit)
 	print (knapSack(W, weight, profit, n))
