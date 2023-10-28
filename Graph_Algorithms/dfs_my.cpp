@@ -2,11 +2,12 @@
 #include<vector>
 using namespace std;
 
-vector<int> v[10005];
+vector<int> v[10005],v2;
 int visited[10005];
 
 void DFS(int node){
     visited[node]=1;
+    v2.push_back(node);
     cout<<node;
 
     for (int i=0;i<v[node].size();i++){
@@ -30,6 +31,13 @@ int main(){
         v[y].push_back(x);
     }
     DFS(1);
+
+    if (v2.size()==nodes+1){
+        cout<<"YES"<<endl;
+    }
+    else {
+        cout<<endl<<"NO"<<endl;
+    }
 
 
     return 0;

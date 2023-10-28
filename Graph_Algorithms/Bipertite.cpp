@@ -2,12 +2,12 @@
 using  namespace  std;
 vector<int>v[1000];
 int vis[1000],col[1000];
- 
+
 bool dfs(int node,int c)
 {
     vis[node]=1;
     col[node]=c;
- 
+
     for(int child: v[node])
     {
         if(vis[child]==0)
@@ -20,7 +20,7 @@ bool dfs(int node,int c)
     }
     return true;
 }
- 
+
 int main()
 {
     int n,e;
