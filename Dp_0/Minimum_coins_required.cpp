@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>  
-using namespace std;  
-int dp[1000] = { 0 }; 
+using namespace std; 
+// int dp[sum] = { 0 }; 
 int minCoins(int coins[],int N, int M) 
 {  
+    int dp[N+1] = { 0 }; 
     for (int i = 0; i <= N; i++)  
         dp[i] = INT_MAX; 
     dp[0] = 0;
@@ -17,8 +18,8 @@ int minCoins(int coins[],int N, int M)
 }  
 int main()  
 {  
-    int sum = 30;  
+    int sum = 5;  
     int total_coins = 3; 
-    int coins[] = { 10, 25, 5 }; 
+    int coins[] = { 1, 2, 3 }; 
     cout << "Minimum coins needed are " << minCoins(coins,sum, total_coins);  
 }  

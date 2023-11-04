@@ -27,9 +27,10 @@ int main(){
         graph[u].push_back(v);
         graph[v].push_back(u);
     }
-    dfs(0);
+    dfs(1);
+    cout<<"Output:"<<endl;
     
-    for (int i=0;i<nodes;i++){
+    for (int i=0;i<=nodes;i++){
         if (visited[i]==1){
             cout<<i<<" ";
         }

@@ -2,7 +2,7 @@
 #include<algorithm>
 #include<vector>
 using namespace std;
-    int notes[]={1,2,5,10,20,50,100,500,1000};
+    int notes[]={1,2,5,10,20};
     int notes_size=sizeof(notes)/sizeof(int);
     void findMin(int value){
         sort(notes,notes+notes_size);

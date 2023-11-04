@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
- 
+
 int adj[100][100];
 int dis[100],vis[100],par[100];
- 
+
 int node,edge;
- 
+
 void bfs(int st)
 {
     queue< int > q;
@@ -24,6 +24,7 @@ void bfs(int st)
                 int v = i; // 2 3
                 if(vis[v]==0)
                 {
+                    vis[v]=1;
                     dis[v] = dis[u] + 1;
                     par[v] = u;
                     q.push(v);  
@@ -32,7 +33,7 @@ void bfs(int st)
         }
     }
 }
- 
+
 int main()
 {
     cin>>node>>edge;
