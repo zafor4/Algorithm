@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double power(double base, int exp) {
+    double result = 1.0;
+    while (exp > 0) {
+        if (exp % 2 == 1) {
+            result *= base;
+        }
+        base *= base;
+        exp /= 2;
+    }
+    return result;
+}
+
+double findSquareRoot(double num) {
+    double low = 0, high = num;
+    double mid;
+    double precision = 1e-6;  
+    while ((high - low) > precision) {
+        mid = (low + high) / 2.0;
+        if (mid * mid < num) {
+            low = mid;
+        } else {
+            high = mid;
+        }
+    }
+    return (low + high) / 2.0;
+}
+
+int main() {
+    double m;
+    int n;
+    cout << "Enter the base (m): ";
+    cin >> m;
+    cout << "Enter the exponent (n): ";
+    cin >> n;
+
+    double result;
+    if (n > 0 && n % 2 == 0) {
+        result = power(m, n / 2);
+        cout << result << endl;
+    } else {
+
+        double powerResult = power(m, n);
+
+        result = findSquareRoot(powerResult);
+        cout << result << endl;
+    }
+
+    return 0;
+}
